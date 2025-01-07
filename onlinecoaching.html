@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,127 +16,108 @@
         body {
             line-height: 1.6;
             color: #333;
-            background-color: #fff;
+            background-color: #f9f9f9;
         }
 
         .hero {
-            min-height: 70vh;
-            background-color: #f8f8f8;
-            padding: 2rem;
-            display: flex;
+            background-color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
             position: relative;
-            overflow: hidden;
         }
 
         .hero-content {
-            width: 50%;
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero-image {
-            width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         h1 {
             color: #bc8f8f;
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             font-weight: 300;
-            text-align: left;
+            letter-spacing: 1px;
         }
 
-        .subtitle {
-            font-size: 1.5rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        .intro-text {
-            color: #bc8f8f;
+        .hero-text {
             font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .description {
             color: #666;
             margin-bottom: 2rem;
-            max-width: 600px;
         }
 
-        .main-content {
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 2rem auto;
+            border-radius: 10px;
+        }
+
+        .features {
+            padding: 2rem;
+            background-color: #fff;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+        }
+
+        .features-grid {
             display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 4rem;
-            align-items: start;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            padding: 1.5rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             color: #bc8f8f;
             font-size: 2rem;
-            margin-bottom: 2rem;
-            font-weight: 400;
-        }
-
-        .features-list, .benefits-list {
-            list-style: none;
-            margin-bottom: 3rem;
-        }
-
-        .features-list li, .benefits-list li {
             margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
+            text-align: center;
         }
 
-        .features-list li::before, .benefits-list li::before {
-            content: "•";
-            color: #bc8f8f;
-            position: absolute;
-            left: 0;
+        h3 {
+            color: #555;
+            margin-bottom: 1rem;
         }
 
-        .side-image {
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
+        .benefits {
+            padding: 4rem 2rem;
+            background-color: #f8f8f8;
         }
 
-        .side-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .cta-section {
             text-align: center;
             padding: 4rem 2rem;
-            background-color: #f8f8f8;
+            background-color: #fff;
         }
 
         .button {
             display: inline-block;
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             background-color: #bc8f8f;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 25px;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s;
             margin: 2rem 0;
         }
 
@@ -143,72 +125,90 @@
             background-color: #a07777;
         }
 
-        .signature {
-            font-family: cursive;
-            color: #bc8f8f;
-            font-size: 1.5rem;
-            margin-top: 2rem;
+        .final-message {
+            color: #666;
+            margin: 1rem 0;
         }
 
         @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-            }
-            .hero-content, .hero-image {
-                width: 100%;
-                padding: 2rem;
-            }
-            .main-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
             h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <section class="hero">
         <div class="hero-content">
-            <h1>Online Coaching</h1>
-            <p class="subtitle">Achieve Your Fitness Goals<br>Anytime, Anywhere!</p>
-            <p class="intro-text">Are you ready to transform your fitness but need flexibility?</p>
-            <p class="description">My Online Coaching Program gives you the tools, guidance, and support to achieve your goals on your schedule—from anywhere in the world!</p>
-        </div>
-        <div class="hero-image">
-            <img src="https://static.wixstatic.com/media/d5cb26_3f052f86afe44874a5621b053dd07e6b~mv2.jpg" alt="Fitness Exercise">
+            <h1>Transform Anywhere with Online Coaching</h1>
+            <img src="https://static.wixstatic.com/media/d5cb26_3f052f86afe44874a5621b053dd07e6b~mv2.jpg" alt="Online Coaching" class="hero-image">
+            <p class="hero-text">Are you ready to transform your health, boost your confidence, and feel stronger than
+                ever?<br>
+                My Personal Training Program is here to guide you every step of the way.</p>
         </div>
     </section>
 
-    <div class="main-content">
-        <div class="features">
-            <h2>What You'll Achieve:</h2>
-            <ul class="features-list">
-                <li>Customized Workout Plans tailored to your fitness level, goals, and available equipment.</li>
-                <li>Personalized Nutrition Guidance to fuel your progress and fit your lifestyle.</li>
-                <li>Weekly Check-Ins & Feedback to keep you accountable and on track.</li>
-                <li>Support via messaging or email for questions and motivation.</li>
-                <li>Progress Tracking Tools to monitor your success and adjust as needed.</li>
-            </ul>
+    <section class="features">
+        <h2>What You'll Get</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>Personalized Training Plan</h3>
+                <p>Tailored to your goals (weight loss, muscle gain, or improved fitness)</p>
+            </div>
+            <div class="feature-item">
+                <h3>1-on-1 Coaching Sessions</h3>
+                <p>Expert guidance on form and technique</p>
+            </div>
+            <div class="feature-item">
+                <h3>Weekly Progress Tracking</h3>
+                <p>Celebrate your wins and keep you on track</p>
+            </div>
+            <div class="feature-item">
+                <h3>Nutritional Support</h3>
+                <p>Complement your workouts and fuel your body</p>
+            </div>
+            <div class="feature-item">
+                <h3>Constant Motivation</h3>
+                <p>Accountability so you never lose focus</p>
+            </div>
+        </div>
+    </section>
 
-            <h2>Benefits You'll Enjoy:</h2>
-            <ul class="benefits-list">
-                <li>Flexibility: Train at your convenience, whether at home, in the gym, or while traveling</li>
-                <li>Affordability: Get all the benefits of personal coaching at a fraction of the cost.</li>
-                <li>Results-Focused: Programs designed to help you achieve your specific goals, faster.</li>
-                <li>Motivation & Accountability: Stay consistent with regular check-ins and ongoing support.</li>
-                <li>Global Access: No matter where you are, your coach is just a message away.</li>
-            </ul>
+    <section class="benefits">
+        <h2>Benefits You'll Enjoy</h2>
+        <div class="benefits-list">
+            <div class="benefit-item">
+                <h3>Faster Results</h3>
+                <p>Achieve your goals quicker with a program designed just for you</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Boosted Confidence</h3>
+                <p>Feel proud of your progress, both physically and mentally</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Improved Energy</h3>
+                <p>Build strength, stamina, and vitality for everyday life</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Expert Support</h3>
+                <p>Never feel lost—I will guide you at every step</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Long-Lasting Health</h3>
+                <p>Learn habits that support your well-being for years to come</p>
+            </div>
         </div>
-        <div class="side-image">
-            <img src="https://static.wixstatic.com/media/508cfd_d487678499744af1b72ff472d54fcb86~mv2.jpg/v1/fill/w_418,h_599,fp_0.50_0.32,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSI09371.jpg" alt="Fitness Coach">
-        </div>
-    </div>
+    </section>
 
     <section class="cta-section">
-        <p>Your goals, your way—transform your fitness with online coaching!</p>
+        <p class="final-message">Let's transform your fitness together!</p>
         <a href="https://madetoperform.com.au/contact" class="button">Apply Now</a>
     </section>
 </body>
+
 </html>
