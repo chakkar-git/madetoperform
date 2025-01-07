@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,12 +94,16 @@
         .why-section {
             background-color: #f8f8f8;
             padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .why-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            text-align: left;
         }
 
         .cta-section {
@@ -142,25 +147,47 @@
             .main-heading {
                 font-size: 2.5rem;
             }
+
             .program-info {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+
             .hero-content {
                 text-align: center;
             }
+
             .hero-text {
                 margin: 2rem auto;
+            }
+
+            .why-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .why-content {
+                text-align: center;
+            }
+
+            .hero-image {
+                margin-top: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
     <section class="hero">
         <div class="hero-content">
-            <h1 class="main-heading">Achieve Your Fitness Goals!<br>Anytime!<br>Anywhere!</h1>
-            <p class="hero-text">Join our 24-Day Women's Fitness & Strength Challenge and take the first step toward a healthier, stronger you!</p>
+            <h1 class="main-heading">Transform in 15 minutes a day!</h1>
+            <p class="hero-text">Join our 24-Day Women's Fitness & Strength Challenge and take the first step toward a
+                healthier, stronger you!</p>
             <a href="https://madetoperform.com.au/contact" class="button">Join Now</a>
+            <div class="hero-image">
+                <img src="https://static.wixstatic.com/media/d5cb26_da3051656aaa49a4b01c255f4a08a652~mv2.jpg"
+                    alt="Fitness Challenge" style="width: 100%; height: auto; border-radius: 10px; margin-top: 2rem;">
+            </div>
         </div>
     </section>
 
@@ -173,25 +200,33 @@
                 <li>Strength & Confidence – Feel empowered with every move.</li>
                 <li>Progress Tracking: Monitor your results with photos, measurements, and performance milestones.</li>
                 <li>Guidance & Support – Designed specifically for women like YOU.</li>
+                <li>Weekly 15 minute check in to ensure your reaching your goals!</li>
             </ul>
         </div>
         <div class="image-placeholder">
-            <img src="https://static.wixstatic.com/media/65bb02_2e95064bf7cd4193b4846240d9f76570~mv2.jpg/v1/fill/w_1836,h_823,fp_0.50_0.44,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSI09577.jpg" alt="Fitness Challenge" style="width: 100%; height: auto; border-radius: 10px;">
+            <img src="https://static.wixstatic.com/media/65bb02_2e95064bf7cd4193b4846240d9f76570~mv2.jpg/v1/fill/w_1836,h_823,fp_0.50_0.44,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSI09577.jpg"
+                alt="Fitness Challenge" style="width: 100%; height: auto; border-radius: 10px;">
         </div>
     </section>
 
     <section class="why-section">
         <div class="why-content">
             <h2>Why 24 Days?</h2>
-            <p>It's the perfect time to create a foundation for lasting change. With quick, effective workouts, you'll build strength, improve fitness, and start seeing results without the overwhelm.</p>
+            <p>It's the perfect time to create a foundation for lasting change. With quick, effective workouts, you'll
+                build strength, improve fitness, and start seeing results without the overwhelm.</p>
+        </div>
+        <div class="why-image">
+            <img src="https://static.wixstatic.com/media/d5cb26_88ff27dc0a014454801989d697efb174~mv2.jpg"
+                alt="Fitness Challenge" style="width: 100%; height: auto; border-radius: 10px;">
         </div>
     </section>
 
     <section class="cta-section" id="join">
         <h2>Start Your Transformation Today!</h2>
         <p>This isn't just about exercise – it's about proving to yourself that you CAN make time for YOU.</p>
-        <p class="price">Transform your fitness with online coaching for just $75!</p>
+        <p class="price">Transform your fitness in 15 minutes a day.</p>
         <a href="https://madetoperform.com.au/contact" class="button">Apply Now</a>
     </section>
 </body>
+
 </html>
