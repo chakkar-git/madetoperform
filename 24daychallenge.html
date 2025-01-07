@@ -60,35 +60,65 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            gap: 2rem;
+            align-items: start;
         }
 
-        .benefits {
+        .image-placeholder {
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .image-placeholder img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .features {
+            padding: 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .feature-item {
             padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         h2 {
             color: #bc8f8f;
             font-size: 2rem;
             margin-bottom: 2rem;
+            text-align: left;
         }
 
-        .benefits-list {
-            list-style: none;
-        }
-
-        .benefits-list li {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .benefits-list li::before {
-            content: "•";
+        h3 {
             color: #bc8f8f;
-            position: absolute;
-            left: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .feature-item p {
+            color: #666;
+            line-height: 1.5;
+            font-size: 1rem;
         }
 
         .why-section {
@@ -136,11 +166,12 @@
             color: #333;
         }
 
-        .signature {
-            font-family: cursive;
-            color: #bc8f8f;
-            font-size: 1.5rem;
-            margin-top: 2rem;
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: 0 auto;
+            }
         }
 
         @media (max-width: 768px) {
@@ -192,20 +223,38 @@
     </section>
 
     <section class="program-info">
-        <div class="benefits">
+        <div class="features">
             <h2>What You'll Get:</h2>
-            <ul class="benefits-list">
-                <li>15-Minute Daily Workouts – Easy to fit into your busy schedule.</li>
-                <li>Build Healthy Habits – Small, consistent steps lead to big results.</li>
-                <li>Strength & Confidence – Feel empowered with every move.</li>
-                <li>Progress Tracking: Monitor your results with photos, measurements, and performance milestones.</li>
-                <li>Guidance & Support – Designed specifically for women like YOU.</li>
-                <li>Weekly 15 minute check in to ensure your reaching your goals!</li>
-            </ul>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>15-Minute Daily Workouts</h3>
+                    <p>Easy to fit into your busy schedule</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Build Healthy Habits</h3>
+                    <p>Small, consistent steps lead to big results</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Strength & Confidence</h3>
+                    <p>Feel empowered with every move</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your results with photos, measurements, and performance milestones</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Guidance & Support</h3>
+                    <p>Designed specifically for women like YOU</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Weekly Check-ins</h3>
+                    <p>15-minute check-ins to ensure you're reaching your goals</p>
+                </div>
+            </div>
         </div>
         <div class="image-placeholder">
             <img src="https://static.wixstatic.com/media/65bb02_2e95064bf7cd4193b4846240d9f76570~mv2.jpg/v1/fill/w_1836,h_823,fp_0.50_0.44,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSI09577.jpg"
-                alt="Fitness Challenge" style="width: 100%; height: auto; border-radius: 10px;">
+                alt="Fitness Challenge" style="width: 100%; height: auto; border-radius: 10px; margin-top: 5.3rem;">
         </div>
     </section>
 
