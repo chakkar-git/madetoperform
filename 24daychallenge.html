@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-Minute Daily Fitness Challenge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .hero {
+            min-height: 80vh;
+            background-color: #f8f8f8;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: right;
+        }
+
+        .main-heading {
+            color: #bc8f8f;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 2rem 0;
+            max-width: 600px;
+            margin-left: auto;
+        }
+
+        .program-info {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .benefits {
+            padding: 2rem;
+        }
+
+        h2 {
+            color: #bc8f8f;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: "•";
+            color: #bc8f8f;
+            position: absolute;
+            left: 0;
+        }
+
+        .why-section {
+            background-color: #f8f8f8;
+            padding: 4rem 2rem;
+        }
+
+        .why-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #bc8f8f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #a07777;
+            transform: translateY(-2px);
+        }
+
+        .price {
+            font-size: 2rem;
+            margin: 2rem 0;
+            color: #333;
+        }
+
+        .signature {
+            font-family: cursive;
+            color: #bc8f8f;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 2.5rem;
+            }
+            .program-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero-content {
+                text-align: center;
+            }
+            .hero-text {
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="main-heading">Achieve Your Fitness Goals!<br>Anytime!<br>Anywhere!</h1>
+            <p class="hero-text">Join our 24-Day Women's Fitness & Strength Challenge and take the first step toward a healthier, stronger you!</p>
+            <a href="#join" class="button">Join Now</a>
+        </div>
+    </section>
+
+    <section class="program-info">
+        <div class="benefits">
+            <h2>What You'll Get:</h2>
+            <ul class="benefits-list">
+                <li>15-Minute Daily Workouts – Easy to fit into your busy schedule.</li>
+                <li>Build Healthy Habits – Small, consistent steps lead to big results.</li>
+                <li>Strength & Confidence – Feel empowered with every move.</li>
+                <li>Progress Tracking: Monitor your results with photos, measurements, and performance milestones.</li>
+                <li>Guidance & Support – Designed specifically for women like YOU.</li>
+            </ul>
+        </div>
+        <div class="image-placeholder">
+            <img src="https://static.wixstatic.com/media/65bb02_2e95064bf7cd4193b4846240d9f76570~mv2.jpg/v1/fill/w_1836,h_823,fp_0.50_0.44,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSI09577.jpg" alt="Fitness Challenge" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="why-content">
+            <h2>Why 24 Days?</h2>
+            <p>It's the perfect time to create a foundation for lasting change. With quick, effective workouts, you'll build strength, improve fitness, and start seeing results without the overwhelm.</p>
+        </div>
+    </section>
+
+    <section class="cta-section" id="join">
+        <h2>Start Your Transformation Today!</h2>
+        <p>This isn't just about exercise – it's about proving to yourself that you CAN make time for YOU.</p>
+        <p class="price">Transform your fitness with online coaching for just $75!</p>
+        <a href="#" class="button">Apply Now</a>
+    </section>
+</body>
+</html>
