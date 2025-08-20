@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness & Nutrition Transformation Program</title>
+    <title>Strong and Sculpted - Fitness & Nutrition Transformation Program</title>
     <style>
         * {
             margin: 0;
@@ -17,51 +17,77 @@
         h2 {
             font-family: 'Josefin Sans', sans-serif;
             font-weight: 300;
-            /* Light */
         }
 
         body {
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            min-height: 100vh;
         }
 
         .hero {
-            background-color: #fff;
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
             padding: 4rem 2rem;
             text-align: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(188, 143, 143, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(188, 143, 143, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
             color: #bc8f8f;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: slideInDown 1s ease-out;
         }
 
         .hero-text {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+            animation: slideInUp 1s ease-out 0.3s both;
         }
 
         .hero-image {
             width: 100%;
             max-width: 600px;
             margin: 2rem auto;
-            border-radius: 10px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeInZoom 1s ease-out 0.6s both;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.02);
         }
 
         .features {
-            padding: 2rem;
-            background-color: #fff;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -74,21 +100,61 @@
         }
 
         .feature-item {
-            padding: 1.5rem;
-            background-color: #f8f8f8;
-            border-radius: 8px;
+            padding: 2rem;
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #bc8f8f, #d4b0a7);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-item h3 {
+            color: #bc8f8f;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         h2 {
             color: #bc8f8f;
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #bc8f8f, #d4b0a7);
+            border-radius: 2px;
         }
 
         .benefits {
             padding: 4rem 2rem;
-            background-color: #f8f8f8;
+            background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
         }
 
         .benefits-list {
@@ -97,47 +163,181 @@
         }
 
         .benefit-item {
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #bc8f8f;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .benefit-item h3 {
+            color: #bc8f8f;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         .cta {
             text-align: center;
             padding: 4rem 2rem;
-            background-color: #fff;
+            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            position: relative;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(188, 143, 143, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .empowerment-text {
+            font-size: 1.3rem;
+            color: #666;
+            margin: 2rem 0;
+            font-style: italic;
+            font-weight: 500;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
         }
 
         .button {
             display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #bc8f8f;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, #bc8f8f 0%, #a07777 100%);
             color: #fff;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: background-color 0.3s;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(188, 143, 143, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
         }
 
         .button:hover {
-            background-color: #a07777;
+            background: linear-gradient(135deg, #a07777 0%, #8a5f5f 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(188, 143, 143, 0.4);
+        }
+
+        .button:hover::before {
+            left: 100%;
         }
 
         .price {
-        font-size: 1rem;  
-        margin: 2rem 0;
-        color: #333;      
+            font-size: 1.1rem;  
+            margin: 2rem 0;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* Animations */
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInZoom {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Floating particles animation */
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(188, 143, 143, 0.3);
+            border-radius: 50%;
+            top: 20%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(-10px) rotate(240deg); }
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+                letter-spacing: 1px;
+            }
+
+            .hero-text {
+                font-size: 1.2rem;
             }
 
             .features-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .feature-item {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -146,8 +346,8 @@
 <body>
     <section class="hero">
         <div class="hero-content">
-            <h1>6 Week Challenge!</h1>
-            <p class="hero-text">Sculpt, Strengthen, Succeed!</p>
+            <h1>Strong and Sculpted</h1>
+            <p class="hero-text">Feel like you've let yourself go? It's time to take back control and feel amazing in your own skin!</p>
             <a href="https://buy.stripe.com/5kAfZhgZr8k26qcdQQ" class="button">Start Your Journey</a>
         </div>
         <img src="https://raw.githubusercontent.com/chakkar-git/madetoperform/refs/heads/main/Photos/Smile%201%20Square.jpg" class="hero-image">
@@ -192,6 +392,7 @@
     <section class="cta" id="apply">
         <h2>Start Your Transformation Today!</h2>
         <p class="price">Kickstart your transformation in just 6 weeks - shred fat, build strength, and unleash your best self. Let's make it happen together!</p>
+        <p class="empowerment-text">"If you've lost yourself along the way, this is your chance to reclaim your energy, strength, and confidence."</p>
         <a href="https://buy.stripe.com/5kAfZhgZr8k26qcdQQ" class="button">Join Now</a>
     </section>
 </body>
