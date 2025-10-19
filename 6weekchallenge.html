@@ -27,7 +27,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+            background: linear-gradient(135deg, #bc8f8f 0%, #d4b0a7 50%, #f0e6e6 100%);
             padding: 4rem 2rem;
             text-align: center;
             position: relative;
@@ -54,21 +54,22 @@
         }
 
         h1 {
-            color: #bc8f8f;
+            color: #fff;
             font-size: 3.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
             animation: slideInDown 1s ease-out;
         }
 
         .hero-text {
             font-size: 1.4rem;
-            color: #555;
+            color: #fff;
             margin-bottom: 2.5rem;
             font-weight: 500;
             animation: slideInUp 1s ease-out 0.3s both;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
         }
 
         .hero-image {
@@ -89,45 +90,45 @@
         }
 
         .challenge-details {
-            background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
-            padding: 3rem 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem 2rem;
             margin: 2rem 0;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             text-align: center;
-        }
-
-        .challenge-details h3 {
-            color: #bc8f8f;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .challenge-stats {
             display: flex;
             justify-content: center;
-            gap: 3rem;
-            margin: 2rem 0;
+            gap: 4rem;
+            margin: 0;
             flex-wrap: wrap;
         }
 
         .stat-item {
             text-align: center;
-            padding: 1rem;
+            padding: 0.5rem;
+            min-width: 80px;
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: #bc8f8f;
             display: block;
+            line-height: 1;
         }
 
         .stat-label {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #666;
-            margin-top: 0.5rem;
+            margin-top: 0.3rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .groups-section {
@@ -234,7 +235,7 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             position: relative;
-            height: 250px;
+            height: 300px;
         }
 
         .photo-item:hover {
@@ -575,11 +576,15 @@
             }
 
             .challenge-stats {
-                gap: 1.5rem;
+                gap: 2rem;
             }
 
             .stat-number {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
             }
 
             .groups-grid {
@@ -613,7 +618,7 @@
             }
 
             .photo-item {
-                height: 200px;
+                height: 250px;
             }
             
             .photo-item img {
@@ -635,7 +640,6 @@
             <p class="hero-text">Put yourself first, feel amazing, and step into summer stronger, more confident, and full of energy.</p>
             
             <div class="challenge-details">
-                <h3>Challenge Details</h3>
                 <div class="challenge-stats">
                     <div class="stat-item">
                         <span class="stat-number">Nov 3rd</span>
@@ -650,10 +654,8 @@
                         <div class="stat-label">Groups</div>
                     </div>
                 </div>
-                <p style="color: #666; font-size: 1.1rem; margin-top: 1rem;">This isn't about restriction or punishment — it's about prioritising yourself and building habits that help you feel your best all year round.</p>
+                <p style="color: #666; font-size: 1.1rem; margin-top: 1.5rem; font-weight: 500;">This isn't about restriction or punishment — it's about prioritising yourself and building habits that help you feel your best all year round.</p>
             </div>
-            
-            <a href="https://buy.stripe.com/5kAfZhgZr8k26qcdQQ" class="button">Choose Your Group</a>
         </div>
         <img src="Photos/IMG_8213.jpg" class="hero-image">
     </section>
@@ -782,9 +784,17 @@
 
     <section class="cta" id="apply">
         <h2>🔥 Challenge starts November 3rd!</h2>
-        <p class="empowerment-text">Spots are limited — choose your group, commit to yourself, and let's make this your strongest summer yet.</p>
+        <p class="empowerment-text">Spots are limited — commit to yourself, and let's make this your strongest summer yet.</p>
         <div style="margin: 2rem 0; font-size: 1.1rem; color: #bc8f8f; font-weight: 600;">The Fit in 6 Summer Challenge is your reminder that you deserve to feel good — physically, mentally, and emotionally.</div>
-        <a href="https://buy.stripe.com/5kAfZhgZr8k26qcdQQ" class="button">Choose Your Group & Join Now</a>
+        
+        <div style="margin: 3rem 0; padding: 2rem; background: rgba(188, 143, 143, 0.1); border-radius: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; font-style: italic;">Not sure which group is right for you? Don't worry — I'll help you choose the one that fits your goals and experience best once you join.</p>
+        </div>
+        
+        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="https://buy.stripe.com/5kAfZhgZr8k26qcdQQ" class="button">Join the Challenge</a>
+            <a href="mailto:maryldooney@gmail.com?subject=Made%20To%20Perform%20Enquiry" class="button" style="background: linear-gradient(135deg, #E4405F 0%, #C13584 100%); box-shadow: 0 10px 25px rgba(225, 48, 108, 0.3);">Send a Message</a>
+        </div>
     </section>
 </body>
 
